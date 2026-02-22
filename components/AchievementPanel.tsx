@@ -19,7 +19,7 @@ const AchievementPanel: React.FC<Props> = ({ streakCount, achievements }) => {
         </span>
       </div>
 
-      <div className="space-y-4 max-h-[600px] overflow-y-auto pr-2 custom-scrollbar">
+      <div className="space-y-4 max-h-150 overflow-y-auto pr-2 custom-scrollbar">
         {achievements.length === 0 ? (
           <p className="text-center text-slate-400 py-8 text-sm italic">No milestones set for this habit.</p>
         ) : (
@@ -37,7 +37,7 @@ const AchievementPanel: React.FC<Props> = ({ streakCount, achievements }) => {
                 }`}
               >
                 <div className="flex gap-4">
-                  <div className={`text-3xl flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-xl ${isUnlocked ? 'bg-white dark:bg-slate-800 shadow-sm' : 'bg-slate-50 dark:bg-slate-800/50'}`}>
+                  <div className={`text-3xl shrink-0 w-12 h-12 flex items-center justify-center rounded-xl ${isUnlocked ? 'bg-white dark:bg-slate-800 shadow-sm' : 'bg-slate-50 dark:bg-slate-800/50'}`}>
                     {achievement.icon}
                   </div>
                   <div className="flex-1">

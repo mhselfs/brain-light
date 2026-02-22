@@ -20,8 +20,6 @@ const HabitMenu: React.FC<Props> = ({ habits, onSelect, onAdd, onEdit, onDelete,
   const [activeTab, setActiveTab] = useState<'basic' | 'milestones'>('basic');
 
   const icons = ['💡', '📚', '💪', '🧘', '🍎', '💧', '🏃', '🎨', '🧠', '📵', '🎸', '💻', '🎮', '🏆', '🔥', '🌱'];
-  const colors = ['indigo', 'rose', 'amber', 'emerald', 'blue', 'violet', 'orange', 'cyan'];
-
   const openAddModal = () => {
     setNewName('');
     setSelectedIcon('💡');
@@ -114,7 +112,7 @@ const HabitMenu: React.FC<Props> = ({ habits, onSelect, onAdd, onEdit, onDelete,
             </div>
           </div>
         ))}
-        <button onClick={openAddModal} className="bg-slate-50 dark:bg-slate-900/50 p-6 rounded-3xl border border-dashed border-slate-300 dark:border-slate-700 hover:border-indigo-400 transition-colors flex items-center justify-center gap-2 group min-h-[100px]">
+        <button onClick={openAddModal} className="bg-slate-50 dark:bg-slate-900/50 p-6 rounded-3xl border border-dashed border-slate-300 dark:border-slate-700 hover:border-indigo-400 transition-colors flex items-center justify-center gap-2 group min-h-25">
           <div className="w-10 h-10 rounded-full bg-white dark:bg-slate-800 flex items-center justify-center group-hover:bg-indigo-600 group-hover:text-white transition-colors">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" /></svg>
           </div>
@@ -123,7 +121,7 @@ const HabitMenu: React.FC<Props> = ({ habits, onSelect, onAdd, onEdit, onDelete,
       </div>
 
       {modalState.show && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-950/60 backdrop-blur-sm animate-in fade-in duration-300">
+        <div className="fixed inset-0 z-vi100 flex items-center justify-center p-4 bg-slate-950/60 backdrop-blur-sm animate-in fade-in duration-300">
           <div className="bg-white dark:bg-slate-900 w-full max-w-lg rounded-[2.5rem] shadow-2xl border border-slate-100 dark:border-slate-800 flex flex-col max-h-[90vh]">
             <div className="p-8 pb-0">
               <div className="flex justify-between items-center mb-6">
@@ -148,14 +146,6 @@ const HabitMenu: React.FC<Props> = ({ habits, onSelect, onAdd, onEdit, onDelete,
                     <div className="grid grid-cols-6 gap-2">
                       {icons.map(icon => (
                         <button key={icon} type="button" onClick={() => setSelectedIcon(icon)} className={`h-10 rounded-xl flex items-center justify-center text-xl transition-all ${selectedIcon === icon ? 'bg-indigo-600 text-white scale-110 shadow-lg' : 'bg-slate-50 dark:bg-slate-800 hover:bg-slate-100'}`}>{icon}</button>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-xs font-bold uppercase text-slate-400">Color</label>
-                    <div className="flex flex-wrap gap-3">
-                      {colors.map(color => (
-                        <button key={color} type="button" onClick={() => setSelectedColor(color)} className={`w-8 h-8 rounded-full border-4 transition-all ${selectedColor === color ? `bg-${color}-500 border-white dark:border-slate-900 scale-125 shadow-lg` : `bg-${color}-500 border-transparent opacity-50`}`}></button>
                       ))}
                     </div>
                   </div>

@@ -71,18 +71,12 @@ const Header: React.FC<Props> = ({
                   
                   {/* Dark Mode Toggle */}
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">Dark Mode</span>
-                    <button 
-                      onClick={onToggleDarkMode}
-                      className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none ${isDarkMode ? 'bg-indigo-600' : 'bg-slate-200 dark:bg-slate-700'}`}
-                    >
-                      <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${isDarkMode ? 'translate-x-6' : 'translate-x-1'}`} />
-                    </button>
+                    <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">Light Mode (Coming soon)</span>
                   </div>
 
                   {/* Google Calendar Sync */}
                   <div className="pt-3 border-t border-slate-50 dark:border-slate-700">
-                    <span className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest block mb-3">Google Calendar</span>
+                    <span className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest block mb-3">Google Calendar </span>
                     {isConnectedCalendar ? (
                       <div className="space-y-3">
                         <div className="flex items-center gap-2 text-green-600 dark:text-green-400 text-sm font-medium">
@@ -106,7 +100,7 @@ const Header: React.FC<Props> = ({
                         <svg className="w-4 h-4" viewBox="0 0 24 24">
                           <path fill="currentColor" d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 10h2v7H7zm4-3h2v10h-2zm4 6h2v4h-2z"/>
                         </svg>
-                        Connect Google Cal
+                        Connect Google Cal (Coming soon)
                       </button>
                     )}
                   </div>
