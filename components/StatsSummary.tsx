@@ -10,7 +10,7 @@ interface Props {
 const StatsSummary: React.FC<Props> = ({ streak, total, habitName }) => {
   return (
     <div className="grid grid-cols-2 gap-4">
-      <div className="bg-gradient-to-br from-indigo-600 to-indigo-700 p-6 rounded-3xl text-white shadow-lg shadow-indigo-100 dark:shadow-none">
+      <div className="bg-linear-to-br from-indigo-600 to-indigo-700 p-6 rounded-3xl text-white shadow-lg shadow-indigo-100 dark:shadow-none">
         <p className="text-indigo-100 text-xs font-bold uppercase tracking-wider mb-1">Consistency Streak</p>
         <div className="flex items-baseline gap-2">
           <span className="text-4xl font-black font-outfit">{streak}</span>

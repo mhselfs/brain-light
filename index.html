@@ -5,23 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Brain Light - Habit Tracker</title>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-    }
-    // Initialize theme before React renders
-    if (localStorage.getItem('brain_light_theme') === 'dark' || (!('brain_light_theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  </script>
   <!-- Google API Client and Identity Services -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap"
-    rel="stylesheet">
+    rel="stylesheet"> -->
   <style>
     body {
       font-family: 'Inter', sans-serif;
