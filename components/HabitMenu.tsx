@@ -155,9 +155,9 @@ const HabitMenu: React.FC<Props> = ({ habits, onSelect, onAdd, onEdit, onDelete,
                   <p className="text-xs text-slate-400 mb-4">Set required consecutive days to unlock your milestones.</p>
                   {milestones.map((m, idx) => (
                     <div key={m.id} className="flex items-center gap-3 p-3 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700">
-                      <input type="text" value={m.icon} onChange={(e) => updateMilestone(idx, { icon: e.target.value })} className="w-10 h-10 bg-white dark:bg-slate-900 rounded-xl text-center text-lg focus:outline-none" />
+                      <input readOnly type="text" value={m.icon} onChange={(e) => updateMilestone(idx, { icon: e.target.value })} className="w-10 h-10 bg-white dark:bg-slate-900 rounded-xl text-center text-lg focus:outline-none" />
                       <div className="flex-1">
-                        <input type="text" value={m.title} onChange={(e) => updateMilestone(idx, { title: e.target.value })} className="w-full text-sm font-bold bg-transparent focus:outline-none" placeholder="Title" />
+                        <input type="text" value={m.title} onChange={(e) => updateMilestone(idx, { title: e.target.value })} className="w-full text-sm font-bold bg-transparent focus:outline-none focus:border-b-2 focus:transition-all duration-200" placeholder="Title" />
                         <div className="flex items-center gap-1 text-[10px] text-slate-400 font-bold uppercase">
                           <input type="number" value={m.requiredDays} onChange={(e) => updateMilestone(idx, { requiredDays: parseInt(e.target.value) || 0 })} className="w-10 bg-transparent border-b border-slate-200 dark:border-slate-600 focus:outline-none" />
                           <span>Days</span>

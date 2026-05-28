@@ -19,7 +19,7 @@ const AchievementPanel: React.FC<Props> = ({ streakCount, achievements }) => {
         </span>
       </div>
 
-      <div className="space-y-4 max-h-150 overflow-y-auto pr-2 custom-scrollbar">
+      <div className="space-y-4 max-h-full overflow-y-auto pr-2 custom-scrollbar">
         {achievements.length === 0 ? (
           <p className="text-center text-slate-400 py-8 text-sm italic">No milestones set for this habit.</p>
         ) : (
